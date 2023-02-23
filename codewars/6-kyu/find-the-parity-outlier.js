@@ -19,3 +19,14 @@ function findOutlier(integers){
     
     return evenNums.length > oddNums.length ? Number(oddNums.join('')) : Number(evenNums.join(''));
 }
+
+//a better solution! Only going through the first 3 elements of the array in order to figure out the result, before filtering the whole array once
+
+function findOutlier(integers){
+    var isOdd = (integers[0] % 2 == 0 ? 1 : -1) + 
+        (integers[1] % 2 == 0 ? 1 : -1) +
+        (integers[2] % 2 == 0 ? 1 : -1)
+    
+    return isOdd < 0 ? integers.filter((x)=> x % 2 == 0)[0] : integers.filter((x) => x % 2 != 0)[0]
+    
+}
