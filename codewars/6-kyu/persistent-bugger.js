@@ -8,3 +8,7 @@ function persistence(num) {
     }  
     return numCounter;
 }
+
+let num = 15
+num = num.toString();
+num = num.split('').map(Number)
