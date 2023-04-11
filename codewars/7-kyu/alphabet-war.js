@@ -40,10 +40,15 @@ function alphabetWar(fight){
   var sumRight = 0
   var sumLeft = 0
 
-  for(i in fight){
-    if(right[fight[i]]){sumRight += right[fight[i]]}
-    if(left[fight[i]]){sumLeft += left[fight[i]]}
+  for(i in fight) {
+    if (right[fight[i]]){
+      sumRight += right[fight[i]]
+    }
+    if (left[fight[i]]){
+      sumLeft += left[fight[i]]
+    }
   }
+
   if(sumRight>sumLeft){return 'Right side wins!'}
   if(sumRight<sumLeft){return 'Left side wins!'}
   return "Let's fight again!";
